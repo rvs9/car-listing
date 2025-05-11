@@ -1,36 +1,140 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚗 Suzuki Car Listing Application
 
-## Getting Started
+A modern, responsive car listing application built with Next.js, React, Material UI, and a production-ready architecture.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
+- **Car Browsing**: Browse through a wide selection of cars
+- **Advanced Filtering**: Filter cars by category (new/used), make, model, price range, year, fuel type, etc.
+- **Responsive Design**: Works seamlessly on mobile, tablet, and desktop
+- **Server-Side Rendering**: Optimized performance with Next.js SSR
+- **Quick Filters**: Easy access to common filtering categories
+- **Search Functionality**: Search for specific makes, models, or features
+- **Detailed Car Information**: View comprehensive details for each car
+
+## Tech Stack
+
+- **Framework**: Next.js 15.3+
+- **UI Library**: React 19+
+- **Styling**: Material UI 7.1+
+- **State Management**: React Hooks
+- **Routing**: Next.js App Router
+- **API**: Next.js API Routes
+- **Data Source**: JSON file (can be easily replaced with a database)
+
+
+### Prerequisites
+
+- Node.js 18.17.0 or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/car-listing.git
+   cd car-listing
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn
+   ```
+
+3. Run the development server:
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Key Components
+
+### FilterSidebar
+
+The FilterSidebar allows users to filter cars based on various criteria:
+
+- Category (New/Used)
+- Price Range
+- Year of Manufacture
+- Brand
+- Kilometers Driven
+- Fuel Type
+- Vehicle Type
+- Transmission Type
+
+Each filter is applied immediately when selected, providing instant feedback to the user.
+
+### CarListings
+
+Displays a grid of car cards with pagination and sorting options:
+
+- Relevance
+- Price (Low to High / High to Low)
+- Newest First
+- Mileage (Low to High)
+
+### QuickFilters
+
+Provides easy access to common filter combinations:
+
+- New Cars
+- Used Cars
+- Price-based filters
+- Body type filters
+- Fuel type filters
+
+## API Endpoints
+
+- `GET /api/cars`: Get a list of cars with filtering and pagination
+- `GET /api/cars/[id]`: Get detailed information about a specific car
+
+## Best Practices Implemented
+
+- **Folder Structure**: Organized by feature and component responsibility
+- **Component Reusability**: Components are designed to be reusable
+- **Responsive Design**: Mobile-first approach with MUI breakpoints
+- **Performance Optimization**:
+  - Lazy loading of images
+  - Server-side rendering
+  - Pagination for data fetching
+- **State Management**: Efficient state management with React Hooks
+- **Clean Code**
+- **SEO Optimization**: Proper metadata and semantic HTML structure
+- **Accessibility**: ARIA attributes and keyboard navigation
+- **Error Handling**: Graceful error states and fallbacks
+
+## Responsive Design
+
+The application is fully responsive with optimized layouts for:
+
+- Mobile devices
+- Tablets
+- Desktops
+
+## Testing
+
+The application uses Jest for unit and integration testing.
+
+Running Tests
+
+To execute all tests:
+
+npm run test
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+yarn test
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can generate a coverage report using:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+npm run test -- --coverage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
