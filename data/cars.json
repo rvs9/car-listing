@@ -1,0 +1,70 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "make": "Toyota",
+      "model": "Camry",
+      "year": 2023,
+      "price": 25000,
+      "type": "Sedan",
+      "transmission": "Automatic",
+      "description": "The Toyota Camry is a reliable and fuel-efficient sedan that offers a comfortable ride and modern features.",
+      "specifications": {
+        "engine": "2.5L 4-Cylinder",
+        "horsepower": 203,
+        "fuelEconomy": "28 city / 39 highway",
+        "seating": 5,
+        "color": "Silver"
+      },
+      "images": [
+        "/images/cars/camry-1.jpg",
+        "/images/cars/camry-2.jpg",
+        "/images/cars/camry-3.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "make": "Honda",
+      "model": "CR-V",
+      "year": 2023,
+      "price": 32000,
+      "type": "SUV",
+      "transmission": "Automatic",
+      "description": "The Honda CR-V is a versatile SUV that combines practicality with comfort and efficiency.",
+      "specifications": {
+        "engine": "1.5L Turbo 4-Cylinder",
+        "horsepower": 190,
+        "fuelEconomy": "28 city / 34 highway",
+        "seating": 5,
+        "color": "White"
+      },
+      "images": [
+        "/images/cars/crv-1.jpg",
+        "/images/cars/crv-2.jpg",
+        "/images/cars/crv-3.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "make": "Tesla",
+      "model": "Model 3",
+      "year": 2023,
+      "price": 45000,
+      "type": "Sedan",
+      "transmission": "Automatic",
+      "description": "The Tesla Model 3 is an all-electric sedan that offers impressive range and performance.",
+      "specifications": {
+        "engine": "Dual Motor AWD",
+        "horsepower": 283,
+        "range": "272 miles",
+        "seating": 5,
+        "color": "Red"
+      },
+      "images": [
+        "/images/cars/tesla-1.jpg",
+        "/images/cars/tesla-2.jpg",
+        "/images/cars/tesla-3.jpg"
+      ]
+    }
+  ]
+}
