@@ -38,7 +38,7 @@ A modern, responsive car listing application built with Next.js, React, Material
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/car-listing.git
+   https://github.com/rvs9/car-listing.git
    cd car-listing
    ```
 
