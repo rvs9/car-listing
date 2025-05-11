@@ -2,6 +2,11 @@
 
 A modern, responsive car listing application built with Next.js, React, Material UI, and a production-ready architecture.
 
+<img width="1470" alt="Screenshot 2025-05-12 at 2 12 14 AM" src="https://github.com/user-attachments/assets/65cff4ee-d268-40b9-b32e-92ffce5a1ab1" />
+<img width="1470" alt="Screenshot 2025-05-12 at 2 13 03 AM" src="https://github.com/user-attachments/assets/0d00d320-e218-48e1-8a01-9e0d11e84b8c" />
+
+
+
 ## Features
 
 - **Car Browsing**: Browse through a wide selection of cars
