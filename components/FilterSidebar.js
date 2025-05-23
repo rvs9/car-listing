@@ -248,6 +248,16 @@ export default function FilterSidebar({ handleClose }) {
   };
 
   const handleQuickPriceSelect = (min, max) => {
+    // If the same range is clicked again, reset to default range
+    if (priceRange[0] === min && priceRange[1] === max) {
+      setPriceRange([0, 50]);
+      const params = new URLSearchParams(searchParams.toString());
+      params.delete("minPrice");
+      params.delete("maxPrice");
+      applyFiltersToUrl(params);
+      return;
+    }
+
     setPriceRange([min, max]);
     const params = new URLSearchParams(searchParams.toString());
     params.set("minPrice", Math.round(min * 100000).toString());
