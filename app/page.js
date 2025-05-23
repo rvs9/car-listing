@@ -10,7 +10,7 @@ import QuickFilters from "@/components/QuickFilters";
 import CarListings from "@/components/CarListings";
 
 export default async function HomePage({ searchParams }) {
-  // Resolve searchParams if it's a Promise
+ 
   const resolvedParams = await Promise.resolve(searchParams);
 
   return (

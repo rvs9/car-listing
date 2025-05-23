@@ -117,7 +117,7 @@ export default function FilterSidebar({ handleClose }) {
   };
 
   const applyFiltersToUrl = (params) => {
-    router.push(`/?${params.toString()}`);
+    router.replace(`/?${params.toString()}`, { scroll: false });
     if (handleClose && isMobile) {
       handleClose();
     }
@@ -131,6 +131,33 @@ export default function FilterSidebar({ handleClose }) {
     const params = new URLSearchParams(searchParams.toString());
     params.set("minPrice", Math.round(newValue[0] * 100000).toString());
     params.set("maxPrice", Math.round(newValue[1] * 100000).toString());
+    applyFiltersToUrl(params);
+  };
+
+  // reset the single filter type:-
+  const handleResetSIngleFilter = (typeOfFilter) => {
+    const params = new URLSearchParams(searchParams.toString());
+
+    switch (typeOfFilter) {
+      case "price":
+        setPriceRange([0, 50]);
+        params.delete("minPrice");
+        params.delete("maxPrice");
+        break;
+      case "year":
+        setYearRange([2002, 2025]);
+        params.delete("minYear");
+        params.delete("maxYear");
+        break;
+
+      case "kilometers":
+        setKilometers([0, 200000]);
+        params.delete("minMileage");
+        params.delete("maxMileage");
+        break;
+      default:
+        break;
+    }
     applyFiltersToUrl(params);
   };
 
@@ -351,6 +378,17 @@ export default function FilterSidebar({ handleClose }) {
           <Typography variant="subtitle1" fontWeight="medium">
             Category
           </Typography>
+          {selectedCategory.length > 0 && (
+            <IconButton
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleResetSIngleFilter("category");
+              }}
+            >
+              <RestartAltIcon fontSize="small" />
+            </IconButton>
+          )}
         </AccordionSummary>
         <AccordionDetails sx={{ px: 0, pt: 0 }}>
           <Box sx={{ mb: 2 }}>
@@ -393,6 +431,17 @@ export default function FilterSidebar({ handleClose }) {
           <Typography variant="subtitle1" fontWeight="medium">
             Price Range
           </Typography>
+          {(priceRange[0] > 0 || priceRange[1] < 50) && (
+            <IconButton
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleResetSIngleFilter("price");
+              }}
+            >
+              <RestartAltIcon fontSize="small" />
+            </IconButton>
+          )}
         </AccordionSummary>
         <AccordionDetails sx={{ px: 0, pt: 0 }}>
           <Box sx={{ mb: 2 }}>
@@ -492,6 +541,17 @@ export default function FilterSidebar({ handleClose }) {
           <Typography variant="subtitle1" fontWeight="medium">
             Year
           </Typography>
+          {(yearRange[0] > 2002 || yearRange[1] < 2025) && (
+            <IconButton
+              size="small"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleResetSIngleFilter("year");
+              }}
+            >
+              <RestartAltIcon fontSize="small" />
+            </IconButton>
+          )}
         </AccordionSummary>
         <AccordionDetails sx={{ px: 0, pt: 0 }}>
           <Box sx={{ mb: 2 }}>

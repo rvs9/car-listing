@@ -72,11 +72,11 @@ export default function CarListings({ searchParams }) {
           }
         });
 
-        // Add pagination parameters
+
         params.set("page", currentPage.toString());
         params.set("limit", ITEMS_PER_PAGE.toString());
 
-        // Add sorting parameter if not default
+
         if (sortBy !== "relevance") {
           const [sort, order] = sortBy.split("-");
           params.set("sortBy", sort);
@@ -111,11 +111,11 @@ export default function CarListings({ searchParams }) {
     const newSortBy = event.target.value;
     setSortBy(newSortBy);
 
-    // Update URL with sort parameter
+    
     const params = new URLSearchParams(queryParams.toString());
     params.set("sortBy", newSortBy);
 
-    // Reset to page 1 when sorting changes
+
     params.set("page", "1");
     setCurrentPage(1);
 

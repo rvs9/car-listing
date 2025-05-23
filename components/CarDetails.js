@@ -17,7 +17,6 @@ import {
   useTheme,
   Card,
   CardContent,
-  
 } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import LocalGasStationIcon from "@mui/icons-material/LocalGasStation";
@@ -178,7 +177,20 @@ export default function CarDetails({ id }) {
         >
           <Grid container>
             <Grid item xs={12}>
-              <Box sx={{ position: "relative", height: { xs: 250, sm: 400 } }}>
+              <Box
+                sx={{
+                  position: "relative",
+                  height: {
+                    xs: "250px", // Mobile
+                    sm: "350px", // Tablet
+                    md: "450px", // Desktop
+                  },
+                  width: "100%",
+                  backgroundColor: "grey.100",
+                  borderRadius: "8px 8px 0 0",
+                  overflow: "hidden",
+                }}
+              >
                 <CarImageCarousel
                   images={car.images || []}
                   make={car.make}
@@ -240,7 +252,6 @@ export default function CarDetails({ id }) {
                         >
                           {formatIndianPrice(car.price)}
                         </Typography>
-
                       </Box>
 
                       <Divider sx={{ mb: 3 }} />
@@ -374,7 +385,6 @@ export default function CarDetails({ id }) {
                       </Grid>
 
                       <Divider sx={{ mb: 3 }} />
-
                     </Box>
                   </Grid>
 

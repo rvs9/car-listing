@@ -93,7 +93,7 @@ export default function CarImageCarousel({
             alt={`${make} ${model} - Image ${currentIndex + 1}`}
             fill
             style={{
-              objectFit: "cover",
+              objectFit: "contain",
             }}
             priority={currentIndex === 0}
             onError={handleImageError}

@@ -141,10 +141,7 @@ const CarCard = ({ car }) => {
           )}
           <CardMedia
             component="img"
-            image={
-              car.images?.[0] ||
-              "/car-placeholder-image.webp"
-            }
+            image={car.images?.[0] || "/car-placeholder-image.webp"}
             alt={`${car.make} ${car.model}`}
             onClick={handleImageClick}
             sx={{
@@ -153,7 +150,7 @@ const CarCard = ({ car }) => {
               left: 0,
               width: "100%",
               height: "100%",
-              objectFit: "cover",
+              objectFit: "contain",
               objectPosition: "center",
               backgroundColor: "grey.100",
               transform: "scale(1)",
@@ -275,8 +272,7 @@ const CarCard = ({ car }) => {
             <CardMedia
               component="img"
               image={
-                car.images?.[selectedImage] ||
-                "/car-placeholder-image.webp"
+                car.images?.[selectedImage] || "/car-placeholder-image.webp"
               }
               alt={`${car.make} ${car.model}`}
               sx={{

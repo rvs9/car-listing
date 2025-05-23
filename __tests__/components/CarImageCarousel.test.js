@@ -15,7 +15,7 @@ describe("CarImageCarousel Component", () => {
     // When no images are provided, it should show a placeholder
     const image = screen.getByAltText("Maruti Swift - Image 1");
     expect(image).toBeInTheDocument();
-    expect(image.src).toContain("/images/car-placeholder.svg");
+    expect(image.src).toContain("/car-placeholder-image.webp");
   });
 
   it("renders first image from the provided images array", () => {
